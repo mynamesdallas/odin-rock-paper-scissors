@@ -1,3 +1,7 @@
+const rockBtn = document.querySelector("#rockBtn");
+const paperBtn = document.querySelector("#paperBtn");
+const scissorsBtn = document.querySelector("#scissorsBtn");
+
 const getComputerChoice = () => {
     const computerChoice = Math.floor(Math.random() * 3);
 
@@ -13,7 +17,7 @@ const getComputerChoice = () => {
 }
 
 const getHumanChoice = (userChoice) => {
-    return userChoice = prompt("Choose Rock, Paper, or Scissors");
+    
 }
 
 const playGame = () => {
@@ -31,7 +35,7 @@ const playGame = () => {
 
         if (human === "rock" && computer === "scissors" ||
             human === "paper" && computer === "rock" ||
-            human === "scissors" & computer === "paper") {
+            human === "scissors" && computer === "paper") {
                 humanScore++;
                 console.log(`You win: ${human} beats ${computer}`);
                 alert(`You win: ${human} beats ${computer}`);
@@ -40,13 +44,6 @@ const playGame = () => {
                 console.log(`You lose: ${computer} beats ${human}`);
                 alert(`You lose: ${computer} beats ${human}`);
             }
-    }
-
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-
-        playRound(humanSelection, computerSelection);
     }
 }
 
